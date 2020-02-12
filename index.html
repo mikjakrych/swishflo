@@ -14,16 +14,30 @@
       swishflo
     </h1>
     <p>
-      The swishflo effect adds a nice clean touch to any button. Use on blog tags, block links,
+      The swishflo effect simulates 3-dimensional depression of a glossy button using a background
+      javascript to manipulate the button's background-image (a radial gradient). Swishflo adds
+      a nice clean touch to any clickable object. Use it on blog tags, block links,
       navbar links, and so forth. Simply copy and paste the following code
     </p>
-    <p>
+    <div class="code-box">
       <code>&lt;script src="https://mikjakrych.github.io/swishflo/swishflo.js" charset="utf-8"&gt;&lt;/script&gt;</code>
-    </p>
+    </div>
     <p>
-      into your document and use the class name <code>swishflo</code> on any object that you want
-      to apply swishflo to.
+      into your document and use the <code>swishflo</code> class on any object that you want
+      to apply swishflo to. For instance,
     </p>
+    <div class="code-box">
+      <code>
+        &lt;a href="javascript:myFunction()" class="swishflo"&gt;<br>
+        &nbsp;&nbsp;click me<br>
+        &lt;/a&gt;<br>
+        &lt;script&gt;<br>
+        &nbsp;function myFunction(){<br>
+        &nbsp;&nbsp;&nbsp;console.log("swishflo is exciting");<br>
+        &nbsp;}<br>
+        &lt;/script&gt;
+      </code>
+    </div>
     <p>Here are a few nice swishflo features:</p>
     <p>
       <ul>
@@ -49,7 +63,7 @@
     </p>
     <div id="tag-wrapper">
       <h2 class="swishflo">
-        my projects
+        My Blog Tags
       </h2>
       <div id="tag-box">
         <a class="tag swishflo blue" href="style.css" title="see what runs the color">
@@ -81,6 +95,15 @@
         </a>
         <a class="tag swishflo red" href="" title="nothing...">
           mk
+        </a>
+        <a class="tag swishflo red" href="#" title="goes to #">
+          press me
+        </a>
+        <a class="tag swishflo red" href="javascript:console.log('thank you!')" title="hi">
+          please click me too, my friend
+        </a>
+        <a class="tag swishflo red" href="" title="thank you">
+          thanks!
         </a>
       </div>
     </div>
