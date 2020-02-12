@@ -37,8 +37,8 @@ function startSwishflo(event){
 //continue to progress swishflo
 function swishFlo(event, size){
   //calculate swishflo "epicenter"
-  var x = event.clientX - event.target.offsetLeft;
-  var y = event.clientY - event.target.offsetTop;
+  var x = event.clientX - event.target.offsetLeft + window.pageXOffset;
+  var y = event.clientY - event.target.offsetTop + window.pageYOffset;
   //create swishflo sentence
   var gradient = "radial-gradient(" + size + "px at " + x + "px " + y + "px, rgba(225,225,225," + (1 - size/300) + ") 49.9%, rgba(0,0,0,0) 50%)";
   //do it!
