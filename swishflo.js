@@ -49,7 +49,7 @@ function swishFlo(event, size){
     swishflo_timers[checkSwishfloTimer(event.target)].timer = setTimeout(swishFlo, 10, event, size + 8);
   } else{
     //now do whatever the link was supposed to do
-    if(event.target.href){
+    if(event.target.href && event.button == 0){
       window.location.assign(event.target.href);
     }
     //take out the faded-out swishflo completely
