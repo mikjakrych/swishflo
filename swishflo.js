@@ -19,6 +19,7 @@ function initializeSwishflo(r, g, b){
   //create arrays for timers
   swishflo_timers = new Array;
 }
+initializeSwishflo();
 //run through timers checking for the existence of a timer for this particular button
 //if no timer exists return -1 else return the index in the array
 function checkSwishfloTimer(button){
@@ -51,11 +52,10 @@ function swishFlo(event, button, size){
   var x = event.clientX - button.getBoundingClientRect().left;
   var y = event.clientY - button.getBoundingClientRect().top;
   //create swishflo sentence
-  var gradient = `
-    radial-gradient(${size}px at ${x}px ${y}px,
-    rgba(${swishflo_color.r},${swishflo_color.g},${swishflo_color.b},
-    ${1 - size/300}) 45%, rgba(0,0,0,0) 50%)
-  `;
+  var gradient = "radial-gradient(" +
+  size + "px at " + x + "px " + y + "px, rgba(" +
+  swishflo_color.r + "," + swishflo_color.g + "," + swishflo_color.b + "," +
+  (1 - size/300) + ") 45%, rgba(0,0,0,0) 50%)";
   //do it!
   button.style.backgroundImage = gradient;
   //check whether we have swishflo-ed long enough
